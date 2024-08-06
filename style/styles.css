@@ -1,0 +1,304 @@
+body{
+    background-color: #ececec;
+    font-family: "Roboto", sans-serif;
+}
+.container{ 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+} 
+
+.bus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.4px solid #ccc;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 50px;  
+    border-bottom-right-radius: 20px;
+    background-color: #fff;
+    padding-right: 16px; 
+}
+.busContainer{
+    display: flex;
+    align-items: center;
+    
+}
+.busContainer ul{
+    margin-top:px;
+    padding: 0;
+}
+.busContainer ul li{
+    margin:8px 8px 8px 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+}
+
+.busContainer .seat{
+    width: 35px;
+    height: 35px;
+    border-radius: 12px;
+    border:1.8px solid #cacbd1;
+    background-color: #fcfcfc;
+
+}
+    .busContainer .seat:hover{ 
+        border:1.8px solid #ade2a6!important;
+        background-color: #cdffb8!important; 
+        cursor: pointer; 
+    }
+    .busContainer .seat:focus{
+    border:1.8px solid #ade2a6!important;
+        background-color: #cdffb8!important; 
+        cursor: pointer; 
+    }
+.busContainer .seatMan{ 
+    border:1.8px solid #abcef3!important;
+    background-color: #c8e3fd!important;
+}
+.busContainer .seatWoman{ 
+    border:1.8px solid #f9b1c4!important;
+    background-color: #facdd8!important;
+}
+.busContainer .seatSelect{
+    border:1.8px solid #ade2a6!important;
+    background-color: #cdffb8!important;
+}
+.busContainer .seatSelected{
+    border:1.8px solid #ade2a6!important;
+    background-color: #cdffb8!important;
+}
+.busContainer .cup{
+    width: 35px;
+    height: 35px;
+    border:1.8px solid transparent;
+    background-color: #f4f4f4;
+}
+.busContainer .driver{
+    margin: 6px 16px 0 32px;
+}
+
+
+
+
+.mBus{
+    display: none;
+    transform: rotate(90deg); 
+}
+
+.selectGender{
+    position: absolute;
+    display: none;
+    justify-content: space-between;
+    background-color: #fff;
+    border:1px solid #cacbd1;
+    border-radius: 20px;
+    padding: 8px 10px;
+    transition: 300ms;
+    box-shadow: rgba(149, 157, 165, 0.244) 0px 8px 14px;
+
+}
+.selectGender img{
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+}
+.selectGender .genderMan{
+    margin-right: 10px;
+    cursor: pointer;
+}
+.selectGender .genderWoman{
+    cursor: pointer;
+}
+.selectGender .genderHidden{
+    opacity: .2;
+    pointer-events: none;
+}
+.selectGender .selectGenderActive{
+    display: flex;
+}
+
+.ticket{
+    position: relative;
+    background-color: #fff;
+    border-radius: 30px;
+    margin-top:50px;
+    padding: 6px 26px;
+    min-width: 25%;
+    opacity: 0;
+    transition: 300ms;
+    
+}
+
+.ticketHead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0 ;
+    
+}
+    .ticketHead h2{
+        line-height: 10px;
+        font-size: 24px;
+    }
+    .ticketHead .ticketPrice{
+        font-size: 18px;
+        font-weight: bold;
+    }
+.solids{
+        border:2px dashed #ececec;
+
+
+}
+.solids::before{
+    content: "";
+    position: absolute;
+    margin-top: -12px;
+    left:  0px;
+    height: 24px;
+    width: 18px;
+    border:0;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%; 
+    background-color: #ececec;
+    display: block;
+}
+.solids::after{
+    content: "";
+    position: absolute;
+    margin-top: -12px;
+    right:  0px;
+    height: 24px;
+    width: 18px;
+    border:0;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%; 
+    background-color: #ececec;
+    display: block;
+}
+
+.ticketBotton{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 14px 0 ;
+
+}
+.ticketBotton h4{
+    font-size: 16px;
+    line-height: 10px;
+    font-weight: 400;
+}
+.ticketBotton .duration{
+    text-align: center;
+    width: 100%;
+    & hr{
+        border:1.4px dashed #d1d1d1;
+        width: 80%;
+    }
+}
+.ticketBotton .takeoff, .arrival {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    & span{
+        font-size: 14px;
+        color: #767676;
+    }
+} 
+
+.ticket .selectedSeat{
+
+
+}
+
+.ticket .selectedSeat ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+.ticket .selectedSeat ul li{
+    margin:8px 8px 8px 0;
+    list-style-type: none;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.ticket .selectedSeat .seat{
+    width: 35px;
+    height: 35px;
+    border-radius: 12px;
+    border:1.8px solid #cacbd1;
+    background-color: #fcfcfc;
+
+}
+.ticket .selectedSeat .seat:hover{ 
+    border:1.8px solid #ade2a6!important;
+    background-color: #cdffb8!important; 
+    cursor: pointer; 
+}
+.ticket .selectedSeat .seat:focus{
+border:1.8px solid #ade2a6!important;
+    background-color: #cdffb8!important; 
+    cursor: pointer; 
+}
+
+.ticket .selectedSeat .seatMan{ 
+    border:1.8px solid #abcef3!important;
+    background-color: #c8e3fd!important;
+}
+.ticket .selectedSeat .seatWoman{ 
+    border:1.8px solid #f9b1c4!important;
+    background-color: #facdd8!important;
+}
+
+.ticket button{
+    margin: 16px 0px;
+    padding: 10px 20px;
+    background-color: #76d269;
+    color: #fff;
+    font-size: 18px;
+    width: 100%;
+    border: 2px solid #8de269;
+    border-radius: 20px;
+    cursor:not-allowed;
+}
+
+
+.ticketActive{
+    opacity: 1!important;
+    transition: 300ms;
+}
+@media (min-width: 320px) and (max-width: 800px) {
+ 
+.bus{ 
+    margin-top: 280px;
+    transform: rotate(90deg);
+    
+}
+.bus .seat{
+    transform: rotate(-90deg);
+}
+.mBus{
+    display: none;  
+    margin: 250px 0 250px 0;
+    & .seat{
+        transform: rotate(-90deg);
+    }
+}
+.ticket{
+    margin-top: 280px;
+    min-width: 80%;
+}
+}
