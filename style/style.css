@@ -82,12 +82,7 @@ body{
         }
     }
 
-}
-.mBus{
-    display: none;
-    transform: rotate(90deg); 
-}
-
+} 
 .selectGender{
     position: absolute;
     display: none;
