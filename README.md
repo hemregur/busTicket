@@ -1,4 +1,4 @@
-Merhaba, otobüs bileti seçim projemi, aşağıdaki linke giderek test edebilirsiniz.
+Merhaba; otobüs bileti seçim ekranı projemi, aşağıdaki linkten test edebilirsiniz.
 
 [busticketui.netlify.app](https://busticketui.netlify.app/)
 
